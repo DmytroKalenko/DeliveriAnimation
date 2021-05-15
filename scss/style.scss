@@ -1,3 +1,57 @@
 @import "vars";
 @import "global";
 @import "fonts";
+.route {
+    height: 100px;
+    width: 100%;
+    background-color: grey;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(30deg);
+    span {
+        display: block;
+        height: 20px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg, #fff 0%, #fff 70%, #525252 70%, #525252 100%);
+        background-size: 120px;
+        animation: toMove .1s linear infinite;
+    }
+}
+
+.driver {
+    position: relative;
+    transform: scale(0.5);
+    .smoke {
+        position: absolute;
+        left: -210px;
+        transform: rotate(270deg);
+        height: 240px;
+        bottom: 0;
+        animation: toImpuls .5s linear infinite;
+    }
+}
+
+@keyframes toMove {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: -120px;
+    }
+}
+
+@keyframes toImpuls {
+    0% {
+        height: 60px;
+    }
+    100% {
+        height: 240px;
+    }
+}
