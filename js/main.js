@@ -23,7 +23,7 @@ delivery.animate([
 
 ], {
     // timing options
-    duration: 9000,
+    duration: 7000,
     iterations: Infinity
 })
 
